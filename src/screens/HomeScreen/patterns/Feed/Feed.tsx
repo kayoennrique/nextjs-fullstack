@@ -4,6 +4,7 @@ import Text from "@src/components/Text/Text";
 import Icon from '@src/components/Icon/Icon';
 import Image from '@src/components/Image/Image';
 import Link from '@src/components/Link/Link';
+import Button from '@src/components/Button/Button';
 
 interface FeedProps {
   children: React.ReactNode;
@@ -22,15 +23,17 @@ export default function Feed({ children }) {
 Feed.Header = () => {
   return (
     <Box>
-      <Image
-        styleSheet={{
-          width: '128px',
-          height: '128px',
-          borderRadius: '100%',
-        }}
-        src="https://github.com/kayoennrique.png"
-        alt="Imagem de perfil do Kayo Ennrique"
-      />
+      <Button.Base href="https://github.com/kayoennrique">
+        <Image
+          styleSheet={{
+            width: '128px',
+            height: '128px',
+            borderRadius: '100%',
+          }}
+          src="https://github.com/kayoennrique.png"
+          alt="Imagem de perfil do Kayo Ennrique"
+        />
+      </Button.Base>
       <Link href="https://www.youtube.com/">
         <Icon name="youtube" />
       </Link>
