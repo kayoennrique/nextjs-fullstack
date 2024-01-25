@@ -1,1 +1,1 @@
-# Front End Component Base Architecture - [#01 NextJS FullStack]
+# Managing build time content with file system - [#02 NextJS FullStack]
