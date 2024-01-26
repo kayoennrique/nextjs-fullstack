@@ -8,6 +8,7 @@ import { useTheme } from "@src/theme/ThemeProvider";
 
 interface LinkProps {
   href: string;
+  target?: string;
   children: React.ReactNode;
   styleSheet?: StyleSheet;
   variant?: ThemeTypographyVariants;
@@ -22,7 +23,7 @@ const Link = React.forwardRef(({
   styleSheet,
   colorVariantEnabled,
   ...props
-}: LinkProps, ref) => {
+}:LinkProps, ref) => {
   const theme = useTheme();
   const isIExternalLink = href.startsWith('http');
 
@@ -63,8 +64,8 @@ const Link = React.forwardRef(({
     ...props
   }
 
-  if (isIExternalLink) return (
-    <Text
+  if(isIExternalLink) return (
+    <Text 
       {...{
         target: '_blank',
         ...linkProps,
