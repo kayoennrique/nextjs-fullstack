@@ -14,8 +14,16 @@ interface FeedPostProps {
   url: string;
   date: string;
   tags: string[];
+  image: string;  
 }
-export function FeedPost({ title, excerpt, date, tags, url }: FeedPostProps) {
+export function FeedPost({
+  title,
+  excerpt,
+  date,
+  tags,
+  url,
+  image,
+}: FeedPostProps) {
   const theme = useTheme();
   const postDate = new Date(date)
     .toLocaleDateString('pt-BR', { year: 'numeric', month: 'short', day: 'numeric' })
@@ -98,6 +106,28 @@ export function FeedPost({ title, excerpt, date, tags, url }: FeedPostProps) {
           </Link>
         ))}
       </Box>
+
+      {/* Image */}
+      {image && (
+        <Button.Base
+          href={url}
+          styleSheet={{
+            hover: {
+              opacity: 0.8,
+            }
+          }}
+        >
+          <Image
+            styleSheet={{
+              width: "100%",
+              marginTop: "29px",
+              borderRadius: "12px",
+            }}
+            src={image}
+            alt="Image Description"
+          />
+        </Button.Base>
+      )}
     </Box>
   )
 }

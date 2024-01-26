@@ -60,7 +60,7 @@ Feed.Header = () => {
             borderRadius: '100%',
           }}
           src={templateConfig?.personal?.avatar}
-          alt="Imagem de perfil do Mario Souto"
+          alt="Imagem de perfil do Kayo Ennrique"
         />
 
         <Box
@@ -117,7 +117,7 @@ Feed.Posts = ({ posts }: FeedPostsProps) => {
       <Text variant="heading4" styleSheet={{ marginBottom: "27px" }}>
         Últimas Atualizações
       </Text>
-      {posts.map(({ slug, title, metadata }) => {
+      {posts.map(({ slug, title, metadata, image }) => {
         const { date, excerpt, url, tags } = metadata;
         return (
           <FeedPost
@@ -127,6 +127,7 @@ Feed.Posts = ({ posts }: FeedPostsProps) => {
             excerpt={excerpt}
             tags={tags}
             url={url}
+            image={image}
           />
         )
       })}
