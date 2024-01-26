@@ -6,9 +6,9 @@ import Footer from "./patterns/Footer/Footer";
 import Menu from "./patterns/Menu/Menu";
 import { useTheme } from "@src/theme/ThemeProvider";
 import Link from "@src/components/Link/Link";
+import templatePageHOC from "@src/services/template/templatePageHOC";
 
-export default function HomeScreen(props) {
-  console.log(props);
+function HomeScreen(props) {
   const theme = useTheme();
 
   return (
@@ -26,15 +26,10 @@ export default function HomeScreen(props) {
         <Feed.Header />
       </Feed>
       <Footer />
-      {/* 
-      <Feed>
-        <Feed.Header />
-        <Text tag="h2" variant="heading1">
-          Últimas Atualizações
-        </Text>
-        <Feed.Posts />
-      </Feed>
-       */}
     </Box>
   )
 }
+
+export default templatePageHOC(HomeScreen, {
+  title: "Home"
+})
