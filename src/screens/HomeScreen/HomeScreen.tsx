@@ -7,7 +7,8 @@ import Menu from "./patterns/Menu/Menu";
 import { useTheme } from "@src/theme/ThemeProvider";
 import Link from "@src/components/Link/Link";
 
-export default function HomeScreen() {
+export default function HomeScreen(props) {
+  console.log(props);
   const theme = useTheme();
 
   return (

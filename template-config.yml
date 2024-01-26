@@ -1,0 +1,9 @@
+site:
+  title: "Kayo Ennrique - Timeline"
+  description: "Bem vindo a minha timeline pessoal"
+personal:
+  name: "Kayo Ennrique"
+  avatar: "https://github.com/kayoennrique.png"
+  socialNetworks:
+    youtube: "https://www.youtube.com/"
+    github: "https://www.github.com/kayoennrique"
